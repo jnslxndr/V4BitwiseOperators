@@ -1,0 +1,143 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
+   <PATCH nodename="C:\Users\jens\devel\v4plugins\1ValueMSB\MSB and LSB (help).v4p" filename="C:\Users\jens\devel\v4plugins\1ValueMSB\MSB and LSB (help).v4p" systemname="MSB and LSB (help)">
+   <BOUNDS height="6000" left="3465" top="6930" type="Window" width="9000">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="2" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="1455" top="4875" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1455" top="4875" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="3" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="1455" top="2940" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1455" top="2940" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="5" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="4365" top="555" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="4365" top="555" type="Box" width="690">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="655" visible="1">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="6" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="4380" top="2835" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="4380" top="2835" type="Box" width="690">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE componentmode="Hidden" filename="MSBandLSB.csproj" id="8" nodename="MSB (Value 1)" systemname="MSB (Value 1)">
+   <BOUNDS height="100" left="2190" top="4020" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="MSB" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="2190" top="4020">
+   </BOUNDS>
+   </NODE>
+   <NODE componentmode="Hidden" filename="MSBandLSB.csproj" id="9" nodename="LSB (Value 1)" systemname="LSB (Value 1)">
+   <BOUNDS height="270" left="4995" top="2250" type="Node" width="690">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="LSB" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="4995" top="2250">
+   </BOUNDS>
+   </NODE>
+   <LINK dstnodeid="8" dstpinname="Input" srcnodeid="3" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="2" dstpinname="Y Input Value" srcnodeid="8" srcpinname="MSB">
+   </LINK>
+   <LINK dstnodeid="9" dstpinname="Input" srcnodeid="5" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="6" dstpinname="Y Input Value" srcnodeid="9" srcpinname="LSB">
+   </LINK>
+   <NODE systemname="SpellValue (String)" nodename="SpellValue (String)" componentmode="Hidden" id="11">
+   <BOUNDS type="Node" left="6735" top="1710" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Hex">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="15">
+   <BOUNDS type="Node" left="6015" top="2205" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6015" top="2205" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="15" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="11" dstpinname="Input">
+   </LINK>
+   <NODE systemname="SpellValue (String)" nodename="SpellValue (String)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="3225" top="4020" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Mode" slicecount="1" values="Hex">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (String)" nodename="IOBox (String)" componentmode="InABox" id="16">
+   <BOUNDS type="Node" left="2505" top="4515" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2505" top="4515" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="17" srcpinname="Output" dstnodeid="16" dstpinname="Input String">
+   </LINK>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="17" dstpinname="Input">
+   </LINK>
+   <NODE systemname="shiftleft (Value 1)" filename="MSBandLSB.csproj" nodename="shiftleft (Value 1)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="2190" top="1725" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="LSB" visible="1">
+   </PIN>
+   <PIN pinname="Steps" slicecount="1" visible="1" values="7">
+   </PIN>
+   <PIN pinname="Shifted" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="19">
+   <BOUNDS type="Node" left="1455" top="840" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1455" top="840" width="795" height="240">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="7">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="LSB" dstnodeid="20" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="LSB" dstnodeid="3" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Shifted" dstnodeid="3" dstpinname="Y Input Value">
+   </LINK>
+   </PATCH>
