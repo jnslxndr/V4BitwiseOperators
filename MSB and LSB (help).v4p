@@ -1,23 +1,13 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta25.1.dtd" >
    <PATCH nodename="C:\Users\jens\devel\v4plugins\bitwiseoperators\MSB and LSB (help).v4p" filename="C:\Users\jens\devel\v4plugins\1ValueMSB\MSB and LSB (help).v4p" systemname="MSB and LSB (help)">
-   <BOUNDS height="12645" left="660" top="1635" type="Window" width="9000">
+   <BOUNDS height="12645" left="660" top="1635" type="Window" width="12690">
    </BOUNDS>
    <NODE componentmode="InABox" id="2" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="1455" top="4875" type="Node" width="100">
+   <BOUNDS height="100" left="1470" top="2265" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="240" left="1455" top="4875" type="Box" width="795">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="3" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="1455" top="2940" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="1455" top="2940" type="Box" width="795">
+   <BOUNDS height="240" left="1470" top="2265" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="5" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
@@ -25,7 +15,7 @@
    </BOUNDS>
    <BOUNDS height="240" left="4365" top="555" type="Box" width="690">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="655">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="191">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -39,14 +29,16 @@
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="MSBandLSB.csproj" id="8" nodename="MSB (Value 1)" systemname="MSB (Value 1)">
-   <BOUNDS height="100" left="2190" top="4020" type="Node" width="100">
+   <BOUNDS height="100" left="2190" top="1650" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="MSB" visible="1">
    </PIN>
-   <BOUNDS left="2190" top="4020" type="Box">
+   <BOUNDS left="2190" top="1650" type="Box">
    </BOUNDS>
+   <PIN pinname="NumBits" slicecount="1" values="8">
+   </PIN>
    </NODE>
    <NODE componentmode="Hidden" filename="MSBandLSB.csproj" id="9" nodename="LSB (Value 1)" systemname="LSB (Value 1)">
    <BOUNDS height="270" left="4995" top="2250" type="Node" width="690">
@@ -58,86 +50,24 @@
    <BOUNDS left="4995" top="2250" type="Box">
    </BOUNDS>
    </NODE>
-   <LINK dstnodeid="8" dstpinname="Input" srcnodeid="3" srcpinname="Y Output Value">
-   </LINK>
    <LINK dstnodeid="2" dstpinname="Y Input Value" srcnodeid="8" srcpinname="MSB">
    </LINK>
    <LINK dstnodeid="9" dstpinname="Input" srcnodeid="5" srcpinname="Y Output Value">
    </LINK>
    <LINK dstnodeid="6" dstpinname="Y Input Value" srcnodeid="9" srcpinname="LSB">
    </LINK>
-   <NODE componentmode="Hidden" id="11" nodename="SpellValue (String)" systemname="SpellValue (String)">
-   <BOUNDS height="100" left="6735" top="1710" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Mode" slicecount="1" values="Hex">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="15" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="100" left="6015" top="2205" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="6015" top="2205" type="Box" width="795">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="15" dstpinname="Input String" srcnodeid="11" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="11" dstpinname="Input" srcnodeid="5" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="Hidden" id="17" nodename="SpellValue (String)" systemname="SpellValue (String)">
-   <BOUNDS height="100" left="3225" top="4020" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Mode" slicecount="1" values="Hex">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE componentmode="InABox" id="16" nodename="IOBox (String)" systemname="IOBox (String)">
-   <BOUNDS height="100" left="2505" top="4515" type="Node" width="100">
-   </BOUNDS>
-   <BOUNDS height="240" left="2505" top="4515" type="Box" width="795">
-   </BOUNDS>
-   <PIN pinname="Input String" visible="1">
-   </PIN>
-   </NODE>
-   <LINK dstnodeid="16" dstpinname="Input String" srcnodeid="17" srcpinname="Output">
-   </LINK>
-   <LINK dstnodeid="17" dstpinname="Input" srcnodeid="3" srcpinname="Y Output Value">
-   </LINK>
-   <NODE componentmode="Hidden" filename="MSBandLSB.csproj" id="18" nodename="shiftleft (Value 1)" systemname="shiftleft (Value 1)">
-   <BOUNDS height="100" left="2190" top="1725" type="Node" width="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="LSB" visible="1">
-   </PIN>
-   <PIN pinname="Steps" slicecount="1" visible="1" values="7">
-   </PIN>
-   <PIN pinname="Shifted" visible="1">
-   </PIN>
-   </NODE>
    <NODE componentmode="InABox" id="19" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
    <BOUNDS height="100" left="1455" top="840" type="Node" width="100">
    </BOUNDS>
    <BOUNDS height="240" left="1455" top="840" type="Box" width="795">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" values="7">
+   <PIN pinname="Y Input Value" slicecount="1" values="269">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK dstnodeid="18" dstpinname="Input" srcnodeid="19" srcpinname="Y Output Value">
-   </LINK>
-   <LINK dstnodeid="3" dstpinname="Y Input Value" srcnodeid="18" srcpinname="Shifted">
-   </LINK>
    <NODE componentmode="Hidden" filename="MSBandLSB.csproj" id="21" nodename="FastBit (Value 1)" systemname="FastBit (Value 1)">
-   <BOUNDS height="100" left="6495" top="4605" type="Node" width="100">
+   <BOUNDS height="100" left="7425" top="4320" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Result" visible="1">
    </PIN>
@@ -147,9 +77,9 @@
    </PIN>
    </NODE>
    <NODE componentmode="InABox" id="22" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
-   <BOUNDS height="100" left="5835" top="5115" type="Node" width="100">
+   <BOUNDS height="100" left="6765" top="4830" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS height="5985" left="5835" top="5115" type="Box" width="705">
+   <BOUNDS height="5985" left="6765" top="4830" type="Box" width="705">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
@@ -166,12 +96,12 @@
    </NODE>
    <LINK dstnodeid="22" dstpinname="Y Input Value" srcnodeid="21" srcpinname="Result">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="23">
-   <BOUNDS type="Node" left="5640" top="3630" width="100" height="100">
+   <NODE componentmode="InABox" id="23" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="6555" top="3480" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5640" top="3630" width="930" height="525">
+   <BOUNDS height="525" left="6555" top="3480" type="Box" width="930">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="2" values="14,23">
+   <PIN pinname="Y Input Value" slicecount="2" values="255,127">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -182,8 +112,8 @@
    <PIN pinname="Columns" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE systemname="BitAND (Value 1)" filename="MSBandLSB.csproj" nodename="BitAND (Value 1)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="1410" top="6735" width="100" height="100">
+   <NODE componentmode="Hidden" filename="MSBandLSB.csproj" id="24" nodename="BitAND (Value 1)" systemname="BitAND (Value 1)">
+   <BOUNDS height="100" left="1890" top="7545" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -192,8 +122,8 @@
    <PIN pinname="Result" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="BitOR (Value 1)" filename="MSBandLSB.csproj" nodename="BitOR (Value 1)" componentmode="Hidden" id="25">
-   <BOUNDS type="Node" left="3120" top="8370" width="100" height="100">
+   <NODE componentmode="Hidden" filename="MSBandLSB.csproj" id="25" nodename="BitOR (Value 1)" systemname="BitOR (Value 1)">
+   <BOUNDS height="100" left="4335" top="7485" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -202,107 +132,177 @@
    <PIN pinname="Result" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="BitXOR (Value 1)" filename="MSBandLSB.csproj" nodename="BitXOR (Value 1)" componentmode="Hidden" id="27">
-   <BOUNDS type="Node" left="3915" top="5415" width="100" height="100">
+   <NODE componentmode="Hidden" filename="MSBandLSB.csproj" id="27" nodename="BitXOR (Value 1)" systemname="BitXOR (Value 1)">
+   <BOUNDS height="100" left="3525" top="10005" type="Node" width="100">
    </BOUNDS>
    </NODE>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="28">
-   <BOUNDS type="Node" left="630" top="5925" width="100" height="100">
+   <NODE componentmode="InABox" id="28" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="1110" top="6735" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="630" top="5925" width="795" height="240">
+   <BOUNDS height="240" left="1110" top="6735" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="11">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Input">
+   <LINK dstnodeid="24" dstpinname="Input" srcnodeid="28" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="29">
-   <BOUNDS type="Node" left="1590" top="5955" width="100" height="100">
+   <NODE componentmode="InABox" id="29" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="2070" top="6765" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1590" top="5955" width="795" height="240">
+   <BOUNDS height="240" left="2070" top="6765" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="39">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="29" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Input2">
+   <LINK dstnodeid="24" dstpinname="Input2" srcnodeid="29" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="30">
-   <BOUNDS type="Node" left="675" top="7380" width="100" height="100">
+   <NODE componentmode="InABox" id="30" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="1155" top="8190" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="675" top="7380" width="795" height="240">
+   <BOUNDS height="240" left="1155" top="8190" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="24" srcpinname="Result" dstnodeid="30" dstpinname="Y Input Value">
+   <LINK dstnodeid="30" dstpinname="Y Input Value" srcnodeid="24" srcpinname="Result">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="31">
-   <BOUNDS type="Node" left="2355" top="7635" width="100" height="100">
+   <NODE componentmode="InABox" id="31" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="3570" top="6750" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2355" top="7635" width="795" height="240">
+   <BOUNDS height="240" left="3570" top="6750" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="1">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="31" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Input">
+   <LINK dstnodeid="25" dstpinname="Input" srcnodeid="31" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="32">
-   <BOUNDS type="Node" left="3135" top="7245" width="100" height="100">
+   <NODE componentmode="InABox" id="32" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="4350" top="6360" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3135" top="7245" width="795" height="240">
+   <BOUNDS height="240" left="4350" top="6360" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="25" dstpinname="Input2">
+   <LINK dstnodeid="25" dstpinname="Input2" srcnodeid="32" srcpinname="Y Output Value">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="33">
-   <BOUNDS type="Node" left="2400" top="9030" width="100" height="100">
+   <NODE componentmode="InABox" id="33" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="3615" top="8145" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2400" top="9030" width="795" height="240">
+   <BOUNDS height="240" left="3615" top="8145" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="25" srcpinname="Result" dstnodeid="33" dstpinname="Y Input Value">
+   <LINK dstnodeid="33" dstpinname="Y Input Value" srcnodeid="25" srcpinname="Result">
    </LINK>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="34">
-   <BOUNDS type="Node" left="945" top="9540" width="100" height="100">
+   <NODE componentmode="InABox" id="34" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="945" top="9540" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="945" top="9540" width="795" height="240">
+   <BOUNDS height="240" left="945" top="9540" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" values="127">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="35">
-   <BOUNDS type="Node" left="930" top="10635" width="100" height="100">
+   <NODE componentmode="InABox" id="35" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="930" top="10635" type="Node" width="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="930" top="10635" width="795" height="240">
+   <BOUNDS height="240" left="930" top="10635" type="Box" width="795">
    </BOUNDS>
    <PIN pinname="Y Input Value" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="BitNOT (Value 1)" filename="MSBandLSB.csproj" nodename="BitNOT (Value 1)" componentmode="Hidden" id="36">
-   <BOUNDS type="Node" left="1665" top="10035" width="100" height="100">
+   <NODE componentmode="Hidden" filename="MSBandLSB.csproj" id="36" nodename="BitNOT (Value 1)" systemname="BitNOT (Value 1)">
+   <BOUNDS height="100" left="1665" top="10035" type="Node" width="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
    <PIN pinname="Result" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="34" srcpinname="Y Output Value" dstnodeid="36" dstpinname="Input">
+   <LINK dstnodeid="36" dstpinname="Input" srcnodeid="34" srcpinname="Y Output Value">
    </LINK>
-   <LINK srcnodeid="36" srcpinname="Result" dstnodeid="35" dstpinname="Y Input Value">
+   <LINK dstnodeid="35" dstpinname="Y Input Value" srcnodeid="36" srcpinname="Result">
+   </LINK>
+   <NODE componentmode="Hidden" filename="MSBandLSB.csproj" id="38" nodename="LSB (Value 1)" systemname="LSB (Value 1)">
+   <BOUNDS height="270" left="1515" top="3870" type="Node" width="690">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="LSB" visible="1">
+   </PIN>
+   <BOUNDS left="1515" top="3870" type="Box">
+   </BOUNDS>
+   </NODE>
+   <NODE componentmode="Hidden" filename="MSBandLSB.csproj" id="39" nodename="MSB (Value 1)" systemname="MSB (Value 1)">
+   <BOUNDS height="100" left="2505" top="3870" type="Node" width="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="MSB" visible="1">
+   </PIN>
+   <BOUNDS left="2505" top="3870" type="Box">
+   </BOUNDS>
+   </NODE>
+   <NODE componentmode="InABox" id="40" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="1425" top="3090" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="255" left="1425" top="3090" type="Box" width="900">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" values="781">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK dstnodeid="39" dstpinname="Input" srcnodeid="40" srcpinname="Y Output Value">
+   </LINK>
+   <LINK dstnodeid="38" dstpinname="Input" srcnodeid="40" srcpinname="Y Output Value">
+   </LINK>
+   <NODE componentmode="InABox" id="41" nodename="IOBox (Value Advanced)" systemname="IOBox (Value Advanced)">
+   <BOUNDS height="100" left="1620" top="5160" type="Node" width="100">
+   </BOUNDS>
+   <BOUNDS height="240" left="1620" top="5160" type="Box" width="795">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="8" dstpinname="Input">
+   </LINK>
+   <NODE id="46" componentmode="Hidden" filename="MSBandLSB.csproj" nodename="LSB+MSB (Value 1)" systemname="LSB+MSB (Value 1)" hiddenwhenlocked="0" managers="">
+   <PIN pinname="LSB" visible="1" pintype="Input">
+   </PIN>
+   <PIN pinname="MSB" visible="1" pintype="Input">
+   </PIN>
+   <PIN pinname="Shifted" visible="1" pintype="Output">
+   </PIN>
+   <BOUNDS type="Node" height="270" left="1545" top="4410" width="1080">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="2025" width="2400" height="1800">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="0" width="6120" height="4860">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="NumBits" pintype="Input" visible="0" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="39" srcpinname="MSB" dstnodeid="46" dstpinname="MSB">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="LSB" dstnodeid="46" dstpinname="LSB">
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Shifted" dstnodeid="41" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="23" srcpinname="Y Output Value" dstnodeid="21" dstpinname="Input">
    </LINK>
