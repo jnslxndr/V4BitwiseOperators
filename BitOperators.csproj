@@ -26,7 +26,7 @@
     <Reference Include="VVVV.Utils" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MSBandLSBPlugin.cs" />
+    <Compile Include="BitOperators.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
